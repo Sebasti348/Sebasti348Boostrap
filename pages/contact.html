@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contacto</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <!-- CSS personalizado -->
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Header con Mega Menú -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand" href="../home.html">
+                    <img src="../images/logoWhite.png" alt="Logo" style="height: 100px;">
+                </a>
+
+                <!-- Botón para menú móvil -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menú principal -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../home.html">Inicio</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                Servicios
+                            </a>
+                            <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                                <li class="dropdown-item">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h6 class="dropdown-header">Precios</h6>
+                                            <ul class="list-unstyled">
+                                                <li><a class="dropdown-item" href="prices.html">Plan Básico</a></li>
+                                                <li><a class="dropdown-item" href="prices.html">Plan Premium</a></li>
+                                                <li><a class="dropdown-item" href="prices.html">Plan Empresarial</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h6 class="dropdown-header">Entrenadores</h6>
+                                            <ul class="list-unstyled">
+                                                <li><a class="dropdown-item" href="trainers.html">Entrenador Personal</a></li>
+                                                <li><a class="dropdown-item" href="trainers.html">Entrenador Grupal</a></li>
+                                                <li><a class="dropdown-item" href="trainers.html">Entrenador Especializado</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Formulario de Contacto -->
+    <section class="container my-5">
+        <div class="row justify-content-center">
+            <div class="col-md-8">
+                <div class="card shadow">
+                    <div class="card-body p-5">
+                        <h2 class="text-center mb-4">Contáctanos</h2>
+                        <form id="contactForm" class="needs-validation" novalidate>
+                            <div class="form-floating mb-3">
+                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Nombre" required>
+                                <label for="nombre">Nombre</label>
+                                <div class="invalid-feedback">Por favor ingresa tu nombre</div>
+                            </div>
+                            
+                            <div class="form-floating mb-3">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Email" required>
+                                <label for="email">Email</label>
+                                <div class="invalid-feedback">Por favor ingresa un email válido</div>
+                            </div>
+                            
+                            <div class="form-floating mb-3">
+                                <input type="tel" class="form-control" id="telefono" name="telefono" placeholder="Teléfono">
+                                <label for="telefono">Teléfono (opcional)</label>
+                            </div>
+                            
+                            <div class="form-floating mb-3">
+                                <select class="form-select" id="asunto" name="asunto" required>
+                                    <option value="">Selecciona un asunto</option>
+                                    <option value="consulta">Consulta General</option>
+                                    <option value="soporte">Soporte Técnico</option>
+                                    <option value="sugerencia">Sugerencia</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                                <label for="asunto">Asunto</label>
+                                <div class="invalid-feedback">Por favor selecciona un asunto</div>
+                            </div>
+                            
+                            <div class="form-floating mb-4">
+                                <textarea class="form-control" id="mensaje" name="mensaje" placeholder="Mensaje" style="height: 150px" required></textarea>
+                                <label for="mensaje">Mensaje</label>
+                                <div class="invalid-feedback">Por favor ingresa tu mensaje</div>
+                            </div>
+                            
+                            <div class="d-grid">
+                                <button type="submit" class="btn btn-primary btn-lg">
+                                    <span class="submit-text">Enviar Mensaje</span>
+                                    <span class="spinner-border spinner-border-sm d-none" role="status" aria-hidden="true"></span>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal de Confirmación -->
+    <div class="modal fade" id="confirmationModal" tabindex="-1" aria-labelledby="confirmationModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="confirmationModalLabel">Mensaje Enviado</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <i class="bi bi-check-circle-fill text-success display-4 mb-3"></i>
+                    <p>¡Gracias por contactarnos! Tu mensaje ha sido enviado correctamente.</p>
+                    <p>Nos pondremos en contacto contigo lo antes posible.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Spinner Container -->
+    <div class="spinner-container">
+        <div class="spinner-border text-light" role="status">
+            <span class="visually-hidden">Cargando...</span>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-6">
+                  <h4 class="mb-4">Suscríbete a nuestro newsletter</h4>
+                  <form id="newsletterForm">
+                      <div class="mb-3">
+                          <label for="email" class="form-label">Correo Electrónico</label>
+                          <input type="email" class="form-control" id="email" required>
+                          <div class="invalid-feedback">
+                              Por favor, ingresa un correo electrónico válido.
+                          </div>
+                      </div>
+                      <button type="submit" class="btn btn-primary position-relative">
+                          <span class="button-text">Suscribirse</span>
+                          <div class="position-absolute top-50 end-0 translate-middle-y me-2 spinner-border spinner-border-sm d-none" role="status">
+                              <span class="visually-hidden">Cargando...</span>
+                          </div>
+                      </button>
+                  </form>
+
+              </div>
+              <div class="col-md-6">
+                 
+                  
+                  <div class="map-container">
+                      <iframe 
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d-122.4194154846819!3d37.77492977975992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f1f1f1f1%3A0x1f1f1f1f1f1f1f1f!2sSan+Francisco%2C+CA%2C+USA!5e0!3m2!1sen!2s!4v1616161616161!5m2!1sen!2s" 
+                          style="width: 100%; height: 200px; border: 0;" 
+                          allowfullscreen="" 
+                          loading="lazy">
+                      </iframe>
+                  </div>
+              </div>
+          </div>
+          <div class="row mt-4">
+              <div class="col-12 text-center">
+                  <p class="mb-0">&copy; 2024 WEBGyM. Todos los derechos reservados.</p>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <!-- Scripts personalizados -->
+    <script src="../js/scripts.js"></script>
+</body>
+</html>

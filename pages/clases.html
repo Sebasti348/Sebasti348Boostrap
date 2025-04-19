@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Clases Fitness</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+  <!-- Masonry -->
+  <script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
+  <!-- CSS personalizado -->
+  <link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+    <!-- Header con Mega Menú -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+                <!-- Logo -->
+                <a class="navbar-brand" href="../home.html">
+                    <img src="../images/logoWhite.png" alt="Logo" style="height: 100px;">
+                </a>
+
+                <!-- Botón para menú móvil -->
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Menú principal -->
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../home.html">Inicio</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" 
+                               data-bs-toggle="dropdown" aria-expanded="false">
+                                Servicios
+                            </a>
+                            <ul class="dropdown-menu mega-menu" aria-labelledby="navbarDropdown">
+                                <li class="dropdown-item">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <h6 class="dropdown-header">Precios</h6>
+                                            <ul class="list-unstyled">
+                                                <li><a class="dropdown-item" href="prices.html">Plan Básico</a></li>
+                                                <li><a class="dropdown-item" href="prices.html">Plan Premium</a></li>
+                                                <li><a class="dropdown-item" href="prices.html">Plan Empresarial</a></li>
+                                            </ul>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <h6 class="dropdown-header">Entrenadores</h6>
+                                            <ul class="list-unstyled">
+                                                <li><a class="dropdown-item" href="trainers.html">Entrenador Personal</a></li>
+                                                <li><a class="dropdown-item" href="trainers.html">Entrenador Grupal</a></li>
+                                                <li><a class="dropdown-item" href="trainers.html">Entrenador Especializado</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="blog.html">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contact.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Filtros -->
+    <section class="filter-section">
+        <div class="container">
+            <h3 class="mb-4">Filtrar por categoría</h3>
+            <div class="filter-buttons">
+                <input type="checkbox" id="filterYoga" class="filter-checkbox" checked>
+                <label for="filterYoga" class="filter-label">Yoga</label>
+                
+                <input type="checkbox" id="filterPilates" class="filter-checkbox" checked>
+                <label for="filterPilates" class="filter-label">Pilates</label>
+                
+                <input type="checkbox" id="filterCardio" class="filter-checkbox" checked>
+                <label for="filterCardio" class="filter-label">Cardio</label>
+                
+                <input type="checkbox" id="filterFuerza" class="filter-checkbox" checked>
+                <label for="filterFuerza" class="filter-label">Fuerza</label>
+            </div>
+        </div>
+    </section>
+
+    <!-- Galería Masonry -->
+    <section class="container">
+        <div class="masonry" id="gallery">
+            <!-- Clase de Yoga -->
+            <div class="class-card" data-category="yoga">
+                <img src="../images/classes/yog3.jpg" alt="Yoga">
+                <div class="class-overlay">
+                    <h4>Yoga Flow</h4>
+                    <p>Clase de yoga dinámico para mejorar flexibilidad y fuerza</p>
+                    <span class="badge bg-success">Nivel: Intermedio</span>
+                </div>
+            </div>
+
+            <!-- Clase de Pilates -->
+            <div class="class-card" data-category="pilates">
+                <img src="../images/classes/pil1.webp" alt="Pilates">
+                <div class="class-overlay">
+                    <h4>Pilates Mat</h4>
+                    <p>Ejercicios de control y estabilidad</p>
+                    <span class="badge bg-info">Nivel: Principiante</span>
+                </div>
+            </div>
+
+            <!-- Clase de Cardio -->
+            <div class="class-card" data-category="cardio">
+                <img src="../images/classes/car11.webp" alt="Cardio">
+                <div class="class-overlay">
+                    <h4>HIIT Cardio</h4>
+                    <p>Entrenamiento de alta intensidad</p>
+                    <span class="badge bg-danger">Nivel: Avanzado</span>
+                </div>
+            </div>
+
+            <!-- Clase de Fuerza 1 -->
+            <div class="class-card" data-category="fuerza">
+                <img src="../images/classes/frz1.webp" alt="Fuerza">
+                <div class="class-overlay">
+                    <h4>Entrenamiento Funcional</h4>
+                    <p>Desarrollo de fuerza y potencia</p>
+                    <span class="badge bg-warning">Nivel: Intermedio</span>
+                </div>
+            </div>
+
+            <!-- Clase de Yoga 2 -->
+            <div class="class-card" data-category="yoga">
+                <img src="../images/classes/yog1.avif" alt="Yoga">
+                <div class="class-overlay">
+                    <h4>Yoga Restaurativo</h4>
+                    <p>Relajación y estiramientos suaves</p>
+                    <span class="badge bg-success">Nivel: Principiante</span>
+                </div>
+            </div>
+
+            <!-- Clase de Pilates 2 -->
+            <div class="class-card" data-category="pilates">
+                <img src="../images/classes/pil2.jpg" alt="Pilates">
+                <div class="class-overlay">
+                    <h4>Pilates Reformer</h4>
+                    <p>Ejercicios con máquina reformer</p>
+                    <span class="badge bg-info">Nivel: Intermedio</span>
+                </div>
+            </div>
+
+            <!-- Clase de Cardio 2 -->
+            <div class="class-card" data-category="cardio">
+                <img src="../images/classes/car2.jpg" alt="Cardio">
+                <div class="class-overlay">
+                    <h4>Cardio Dance</h4>
+                    <p>Baile y cardio combinados</p>
+                    <span class="badge bg-danger">Nivel: Principiante</span>
+                </div>
+            </div>
+
+            <!-- Clase de Fuerza 2 -->
+            <div class="class-card" data-category="fuerza">
+                <img src="../images/classes/frz2.jpg" alt="Fuerza">
+                <div class="class-overlay">
+                    <h4>Cross Training</h4>
+                    <p>Entrenamiento funcional intenso</p>
+                    <span class="badge bg-warning">Nivel: Avanzado</span>
+                </div>
+            </div>
+
+            <!-- Clase de Fuerza 3 -->
+            <div class="class-card" data-category="fuerza">
+                <img src="../images/classes/frz3.jpg" alt="Fuerza">
+                <div class="class-overlay">
+                    <h4>Power Lifting</h4>
+                    <p>Levantamiento de pesas avanzado</p>
+                    <span class="badge bg-warning">Nivel: Avanzado</span>
+                </div>
+            </div>
+
+            <!-- Clase de Fuerza 4 -->
+            <div class="class-card" data-category="fuerza">
+                <img src="../images/classes/frz4.jpeg" alt="Fuerza">
+                <div class="class-overlay">
+                    <h4>Body Pump</h4>
+                    <p>Entrenamiento con barras y discos</p>
+                    <span class="badge bg-warning">Nivel: Intermedio</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Tabla de Horarios -->
+    <section class="container">
+        <h3 class="mb-4">Horarios de Clases</h3>
+        <div class="table-responsive schedule-table">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th>Hora</th>
+                        <th>Lunes</th>
+                        <th>Martes</th>
+                        <th>Miércoles</th>
+                        <th>Jueves</th>
+                        <th>Viernes</th>
+                        <th>Sábado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>08:00</td>
+                        <td><span class="class-badge yoga-badge">Yoga</span></td>
+                        <td><span class="class-badge pilates-badge">Pilates</span></td>
+                        <td><span class="class-badge cardio-badge">Cardio</span></td>
+                        <td><span class="class-badge fuerza-badge">Fuerza</span></td>
+                        <td><span class="class-badge yoga-badge">Yoga</span></td>
+                        <td><span class="class-badge pilates-badge">Pilates</span></td>
+                    </tr>
+                    <tr>
+                        <td>10:00</td>
+                        <td><span class="class-badge cardio-badge">Cardio</span></td>
+                        <td><span class="class-badge fuerza-badge">Fuerza</span></td>
+                        <td><span class="class-badge yoga-badge">Yoga</span></td>
+                        <td><span class="class-badge pilates-badge">Pilates</span></td>
+                        <td><span class="class-badge cardio-badge">Cardio</span></td>
+                        <td><span class="class-badge fuerza-badge">Fuerza</span></td>
+                    </tr>
+                    <tr>
+                        <td>12:00</td>
+                        <td><span class="class-badge pilates-badge">Pilates</span></td>
+                        <td><span class="class-badge cardio-badge">Cardio</span></td>
+                        <td><span class="class-badge fuerza-badge">Fuerza</span></td>
+                        <td><span class="class-badge yoga-badge">Yoga</span></td>
+                        <td><span class="class-badge pilates-badge">Pilates</span></td>
+                        <td><span class="class-badge cardio-badge">Cardio</span></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-light py-5">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-6">
+                  <h4 class="mb-4">Suscríbete a nuestro newsletter</h4>
+                  <form id="newsletterForm">
+                      <div class="mb-3">
+                          <label for="email" class="form-label">Correo Electrónico</label>
+                          <input type="email" class="form-control" id="email" required>
+                          <div class="invalid-feedback">
+                              Por favor, ingresa un correo electrónico válido.
+                          </div>
+                      </div>
+                      <button type="submit" class="btn btn-primary position-relative">
+                          <span class="button-text">Suscribirse</span>
+                          <div class="position-absolute top-50 end-0 translate-middle-y me-2 spinner-border spinner-border-sm d-none" role="status">
+                              <span class="visually-hidden">Cargando...</span>
+                          </div>
+                      </button>
+                  </form>
+
+              </div>
+              <div class="col-md-6">
+                 
+                  
+                  <div class="map-container">
+                      <iframe 
+                          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.835434509374!2d-122.4194154846819!3d37.77492977975992!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80858064f1f1f1f1%3A0x1f1f1f1f1f1f1f1f!2sSan+Francisco%2C+CA%2C+USA!5e0!3m2!1sen!2s!4v1616161616161!5m2!1sen!2s" 
+                          style="width: 100%; height: 200px; border: 0;" 
+                          allowfullscreen="" 
+                          loading="lazy">
+                      </iframe>
+                  </div>
+              </div>
+          </div>
+          <div class="row mt-4">
+              <div class="col-12 text-center">
+                  <p class="mb-0">&copy; 2024 WEBGyM. Todos los derechos reservados.</p>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="../js/scripts.js"></script>
+</body>
+</html>
